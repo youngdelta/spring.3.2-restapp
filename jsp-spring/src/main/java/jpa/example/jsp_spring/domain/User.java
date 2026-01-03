@@ -5,7 +5,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Data;
 
 //import javax.persistence.Entity;
 //import javax.persistence.GeneratedValue;
@@ -14,7 +13,6 @@ import lombok.Data;
 
 @Entity
 @Table(name = "`user`")
-@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,36 +21,36 @@ public class User {
     private String email;
 
     // 기본 생성자
-    // public User() {}
+    public User() {}
 
     // 생성자
-    // public User(String name, String email) {
-    //     this.name = name;
-    //     this.email = email;
-    // }
+    public User(String name, String email) {
+        this.name = name;
+        this.email = email;
+    }
 
     // Getter 및 Setter
-    // public Long getId() {
-    //     return id;
-    // }
+    public Long getId() {
+        return id;
+    }
 
-    // public void setId(Long id) {
-    //     this.id = id;
-    // }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    // public String getName() {
-    //     return name;
-    // }
+    public String getName() {
+        return name;
+    }
 
-    // public void setName(String name) {
-    //     this.name = name;
-    // }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    // public String getEmail() {
-    //     return email;
-    // }
+    public String getEmail() {
+        return email;
+    }
 
-    // public void setEmail(String email) {
-    //     this.email = email;
-    // }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }
