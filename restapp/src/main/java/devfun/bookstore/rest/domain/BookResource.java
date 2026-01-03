@@ -2,12 +2,12 @@ package devfun.bookstore.rest.domain;
 
 import java.util.Date;
 
-import org.springframework.hateoas.ResourceSupport;
+import org.springframework.hateoas.RepresentationModel;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "book")
-public class BookResource extends ResourceSupport {
+public class BookResource extends RepresentationModel<BookResource> {
 
 	private Long bookId;
 	private String title;

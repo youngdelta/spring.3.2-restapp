@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.hateoas.Resources;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -35,10 +35,10 @@ public class RestClientTest {
 
 		System.out.println(book);
 
-		ParameterizedTypeReference<Resources<BookResource>> typeRef = 
-				new ParameterizedTypeReference<Resources<BookResource>>() {};
+		ParameterizedTypeReference<CollectionModel<BookResource>> typeRef = 
+				new ParameterizedTypeReference<CollectionModel<BookResource>>() {};
 				
-		ResponseEntity<Resources<BookResource>> response = restTemplate
+		ResponseEntity<CollectionModel<BookResource>> response = restTemplate
 				.exchange("http://localhost:8080/restapp/books",
 						HttpMethod.GET, null, typeRef);
 

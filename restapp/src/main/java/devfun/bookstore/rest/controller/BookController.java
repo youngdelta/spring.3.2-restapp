@@ -1,12 +1,12 @@
 package devfun.bookstore.rest.controller;
 
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.Link;
-import org.springframework.hateoas.Resources;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -58,13 +58,13 @@ public class BookController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	public Resources<BookResource> getBooks(Model model) {
+	public CollectionModel<BookResource> getBooks(Model model) {
 		List<Book> books = bookService.getBooks();
 
 		BookResourceAssembler assembler = new BookResourceAssembler();
-		List<BookResource> resources = assembler.toResources(books);
+		CollectionModel<BookResource> resources = assembler.toCollectionModel(books);
 
-		Resources<BookResource> wrapped = new Resources<BookResource>(resources, 
+		CollectionModel<BookResource> wrapped = CollectionModel.of(resources.getContent(), 
 				linkTo(BookController.class).withSelfRel());
 		return wrapped;
 	}
@@ -78,8 +78,8 @@ public class BookController {
 			throw new ResourceNotFoundException();
 		}
 		BookResourceAssembler assembler = new BookResourceAssembler();
-		BookResource resource = assembler.toResource(book);
-		Link link = new Link("http://localhost:8080/restapp/books/1/reviews", "reviews");
+		BookResource resource = assembler.toModel(book);
+		Link link = Link.of("http://localhost:8080/restapp/books/1/reviews", "reviews");
 		resource.add(link);
 		return resource;
 	}
