@@ -1,9 +1,8 @@
 package jpa.example.jsp_spring;
 
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 
 import java.util.List;
 
@@ -18,21 +17,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 // import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import jpa.example.jsp_spring.controller.UserController;
 import jpa.example.jsp_spring.domain.User;
-import jpa.example.jsp_spring.repogitory.UserRepository;
 import jpa.example.jsp_spring.service.UserService;
 
 //@WebMvcTest(UserController.class)
 @SpringBootTest
 // @AutoConfigureMockMvc
-//@ExtendWith(MockitoExtension.class)
+@ExtendWith(MockitoExtension.class)
 public class UserControllerTest {
 
 //	@Autowired
