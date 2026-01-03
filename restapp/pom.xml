@@ -14,7 +14,7 @@
 
 		<!-- Test -->
 		<version.junit>4.11</version.junit>
-		<version.hamcrest>1.3</version.hamcrest>
+		<version.hamcrest>3.0</version.hamcrest>
 
 		<!-- Logging -->
 		<version.slf4j>1.7.5</version.slf4j>
