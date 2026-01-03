@@ -21,14 +21,14 @@
 		<version.logback>1.0.13</version.logback>
 
 		<!-- Spring -->
-		<version.spring>7.0.2</version.spring>
+		<version.spring>3.2.18.RELEASE</version.spring>
 
 		<!-- MyBatis -->
-		<version.mybatis>3.5.19</version.mybatis>
-		<version.mybatis.spring>4.0.0</version.mybatis.spring>
+		<version.mybatis>3.2.8</version.mybatis>
+		<version.mybatis.spring>1.2.3</version.mybatis.spring>
 
 		<!-- Jackson -->
-		<version.jackson>2.20.1</version.jackson>
+		<version.jackson>2.4.4</version.jackson>
 
 		<!-- Servlet -->
 		<version.servlet>2.5</version.servlet>
@@ -184,6 +184,21 @@
 		<!-- <dependency> <groupId>com.fasterxml.jackson.module</groupId> <artifactId>jackson-module-jaxb-annotations</artifactId> 
 			<version>${version.version}</version> </dependency> -->
 
+			<!-- API for Jakarta XML Binding (JAXB) -->
+		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<version>4.0.4</version> <!-- Check Maven Central for the latest version -->
+		</dependency>
+
+		<!-- JAXB Runtime implementation (e.g., GlassFish Metro) -->
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>4.0.4</version> <!-- Align with the API version -->
+			<scope>runtime</scope>
+		</dependency>
+
 		<!-- SERVLET -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -203,8 +218,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>17</source>
+					<target>17</target>
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>

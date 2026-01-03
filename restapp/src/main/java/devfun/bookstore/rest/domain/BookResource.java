@@ -2,8 +2,6 @@ package devfun.bookstore.rest.domain;
 
 import java.util.Date;
 
-//import javax.xml.bind.annotation.XmlRootElement;
-
 import org.springframework.hateoas.ResourceSupport;
 
 import jakarta.xml.bind.annotation.XmlRootElement;

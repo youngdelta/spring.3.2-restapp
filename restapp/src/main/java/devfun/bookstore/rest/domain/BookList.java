@@ -2,9 +2,6 @@ package devfun.bookstore.rest.domain;
 
 import java.util.List;
 
-//import javax.xml.bind.annotation.XmlElement;
-//import javax.xml.bind.annotation.XmlRootElement;
-
 import devfun.bookstore.common.domain.Book;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;

@@ -1,0 +1,8 @@
+devfun\bookstore\common\service\BookServiceTest.class
+devfun\bookstore\rest\controller\BookControllerAsXmlTest.class
+devfun\bookstore\common\mapper\BookMapperTest.class
+devfun\bookstore\rest\client\RestClientTest.class
+devfun\bookstore\rest\controller\BookControllerAsJsonTest.class
+devfun\bookstore\rest\controller\BookControllerTest.class
+devfun\bookstore\rest\controller\RestResponseEntityExceptionHandlerTest.class
+devfun\bookstore\rest\client\RestClientTest$1.class
