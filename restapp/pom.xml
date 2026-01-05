@@ -26,7 +26,7 @@
 
 		<!-- MyBatis -->
 		<version.mybatis>3.5.16</version.mybatis>
-		<version.mybatis.spring>2.1.2</version.mybatis.spring>
+		<version.mybatis.spring>4.0.0</version.mybatis.spring>
 
 		<!-- Jackson -->
 		<version.jackson>2.15.4</version.jackson>
