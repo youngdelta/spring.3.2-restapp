@@ -17,7 +17,7 @@
 		<version.hamcrest>3.0</version.hamcrest>
 
 		<!-- Logging -->
-		<version.slf4j>1.7.5</version.slf4j>
+		<version.slf4j>2.0.17</version.slf4j>
 		<version.logback>1.0.13</version.logback>
 
 		<!-- Spring -->
