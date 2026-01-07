@@ -198,7 +198,7 @@
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
 			<artifactId>jaxb-runtime</artifactId>
-			<version>4.0.4</version> <!-- Align with the API version -->
+			<version>4.0.6</version> <!-- Align with the API version -->
 			<scope>runtime</scope>
 		</dependency>
 
