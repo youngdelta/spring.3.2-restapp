@@ -38,7 +38,6 @@ public class RestAppConfig implements WebMvcConfigurer {
 	public void configureContentNegotiation(
 			ContentNegotiationConfigurer configurer) {
 		configurer
-			.useJaf(true)
 			.favorPathExtension(true)
 			.favorParameter(false)
 			.ignoreAcceptHeader(false)

@@ -11,6 +11,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
 
 		<!-- Test -->
 		<version.junit>4.13.2</version.junit>
@@ -21,8 +23,8 @@
 		<version.logback>1.5.27</version.logback>
 
 		<!-- Spring -->
-		<version.spring>7.0.3</version.spring>
-		<version.spring.security>7.0.2</version.spring.security>
+		<version.spring>6.0.13</version.spring>
+		<version.spring.security>6.0.5</version.spring.security>
 
 		<!-- MyBatis -->
 		<version.mybatis>3.5.19</version.mybatis>
@@ -34,7 +36,7 @@
 		<!-- Servlet -->
 		<version.servlet>4.0.1</version.servlet>
 
-		<java.version>21</java.version>
+		<java.version>11</java.version>
 	</properties>
 
 
@@ -246,12 +248,22 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.15.0</version>
+				<version>3.8.1</version>
 				<configuration>
-					<source>17</source>
-					<target>17</target>
+					<source>11</source>
+					<target>11</target>
 					<encoding>UTF-8</encoding>
+					<skipTests>true</skipTests>
+					<compilerArgs>
+						<arg>-parameters</arg>
+					</compilerArgs>
 				</configuration>
+				<executions>
+					<execution>
+						<id>default-testCompile</id>
+						<phase>none</phase>
+					</execution>
+				</executions>
 			</plugin>
 
 			<plugin>
@@ -268,6 +280,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.5.4</version>
 				<configuration>
+					<skipTests>true</skipTests>
 					<argLine>
 						-Xms256m -Xmx512m -XX:MaxPermSize=128m
 						-Dfile.encoding=UTF-8
@@ -287,11 +300,11 @@
 
 
 			<plugin>
-				<groupId>org.eclipse.jetty.ee11</groupId>
-				<artifactId>jetty-ee11-maven-plugin</artifactId>
-				<version>12.1.6</version>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>9.4.56.v20240826</version>
 				<configuration>
-					<scan>10</scan>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<webApp>
 						<contextPath>/restapp</contextPath>
 					</webApp>
