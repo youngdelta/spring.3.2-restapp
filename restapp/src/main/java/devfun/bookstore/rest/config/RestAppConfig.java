@@ -23,7 +23,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExc
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "devfun.bookstore.rest.controller" }, useDefaultFilters = false, includeFilters = { @Filter(Controller.class),  @Filter(ControllerAdvice.class) })
+@ComponentScan(basePackages = { "devfun.bookstore.rest.controller" }
+			, useDefaultFilters = false
+			, includeFilters = { @Filter(Controller.class)
+				,  @Filter(ControllerAdvice.class) })
 public class RestAppConfig implements WebMvcConfigurer {
 	
 //	@Override

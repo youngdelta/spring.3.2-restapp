@@ -204,26 +204,11 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- SERVLET -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>${version.servlet}</version>
-			<!-- <scope>provided</scope> -->
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
-		<dependency>
-			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-servlet-api</artifactId>
-			<version>11.0.18</version>
-			<scope>provided</scope>
-		</dependency>
-
+		<!-- Jakarta Servlet API -->
 		<dependency>
 			<groupId>jakarta.servlet</groupId>
 			<artifactId>jakarta.servlet-api</artifactId>
-			<version>6.1.0</version> 
+			<version>5.0.0</version>
 		</dependency>
 
 		<!-- Spring Security -->
@@ -238,6 +223,21 @@
 			<artifactId>spring-security-config</artifactId>
 			<version>${version.spring.security}</version>
 		</dependency>
+		
+		<!-- 
+		// Source - https://stackoverflow.com/a/75615063
+		// Posted by zawarudo, modified by community. See post 'Timeline' for change history
+		// Retrieved 2026-02-06, License - CC BY-SA 4.0 
+		-->
+
+		<!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
+		<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
 
 	</dependencies>
 
@@ -300,9 +300,9 @@
 
 
 			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.4.56.v20240826</version>
+				<groupId>org.eclipse.jetty.ee10</groupId>
+				<artifactId>jetty-ee10-maven-plugin</artifactId>
+				<version>12.0.12</version>
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<webApp>
