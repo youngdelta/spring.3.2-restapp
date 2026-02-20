@@ -193,7 +193,7 @@
 		<dependency>
 			<groupId>jakarta.xml.bind</groupId>
 			<artifactId>jakarta.xml.bind-api</artifactId>
-			<version>4.0.4</version> <!-- Check Maven Central for the latest version -->
+			<version>4.0.5</version> <!-- Check Maven Central for the latest version -->
 		</dependency>
 
 		<!-- JAXB Runtime implementation (e.g., GlassFish Metro) -->
