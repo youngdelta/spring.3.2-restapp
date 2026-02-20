@@ -23,7 +23,7 @@
 		<version.logback>1.5.32</version.logback>
 
 		<!-- Spring -->
-		<version.spring>6.0.13</version.spring>
+		<version.spring>7.0.5</version.spring>
 		<version.spring.security>7.0.3</version.spring.security>
 
 		<!-- MyBatis -->
