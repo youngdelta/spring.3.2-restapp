@@ -20,7 +20,7 @@
 
 		<!-- Logging -->
 		<version.slf4j>2.0.17</version.slf4j>
-		<version.logback>1.5.27</version.logback>
+		<version.logback>1.5.32</version.logback>
 
 		<!-- Spring -->
 		<version.spring>6.0.13</version.spring>
