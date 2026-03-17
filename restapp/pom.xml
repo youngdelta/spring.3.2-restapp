@@ -24,7 +24,7 @@
 
 		<!-- Spring -->
 		<version.spring>7.0.5</version.spring>
-		<version.spring.security>7.0.3</version.spring.security>
+		<version.spring.security>7.0.4</version.spring.security>
 
 		<!-- MyBatis -->
 		<version.mybatis>3.5.19</version.mybatis>
