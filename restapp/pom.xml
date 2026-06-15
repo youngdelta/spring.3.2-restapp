@@ -96,7 +96,7 @@
 		<dependency>
 			<groupId>com.zaxxer</groupId>
 			<artifactId>HikariCP</artifactId>
-			<version>7.0.2</version>
+			<version>7.1.0</version>
 		</dependency>
 		<!-- 출처: https://a-develop.tistory.com/82 [A-develop:티스토리] -->
 
